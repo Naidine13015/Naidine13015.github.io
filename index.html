@@ -16,6 +16,8 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <!-- Language Toggle -->
+        <button id="langToggle" class="btn btn-primary position-fixed" style="top: 1rem; right: 1rem; z-index: 1030;" onclick="toggleLanguage()">FR</button>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -24,7 +26,7 @@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav d-flex flex-column h-100">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
@@ -44,12 +46,11 @@
                         <span class="text-primary">Mohamed</span>
                     </h1>
                     <div class="subheading mb-5">
-                        France, Lyon (+33) 7 68 47 45 83 ·
+                    <!--<a    France, Lyon (+33) 7 68 47 45 83 ·a>-->
                         <a href="mailto:naidine.mohamed1@gmail.com">naidine.mohamed1@gmail.com</a>
                     </div>
-                    <p class="lead mb-5">👨🏼‍💻👨🏼‍💻 Hello everyone! I am Naïdine, passionate about the world of data and technological innovation. I have a lot of interest in data science, data engineering, artificial intelligence and business intelligence.</p>
-                    <br/>
-                    <p class="lead mb-5">👨🏼‍💻👨🏼‍💻 Salut tout le monde ! Je suis Naïdine, passionné par le monde de la data et de l'innovation technologique. J'éprouve beaucoup d'intérêt aux sujets de data science, data engineering, d'intelligence artificielle et de business intelligence.</p>
+                    <p class="lead mb-5" data-lang="en">👨🏼‍💻👨🏼‍💻 Hello everyone! I am Naïdine, passionate about the world of data and technological innovation. I have a lot of interest in data science, data engineering, artificial intelligence and business intelligence.</p>
+                    <p class="lead mb-5" data-lang="fr" style="display: none;">👨🏼‍💻👨🏼‍💻 Salut tout le monde ! Je suis Naïdine, passionné par le monde de la data et de l'innovation technologique. J'éprouve beaucoup d'intérêt aux sujets de data science, data engineering, d'intelligence artificielle et de business intelligence.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/na%C3%AFdine-mohamed-2121b1171/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/Naidine13015"><i class="fab fa-github"></i></a>
@@ -78,11 +79,11 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Business Analyst</h3>
                             <div class="subheading mb-3">Descours & Cabaud</div>
-                            <p>Réalisation d'études en vue d'améliorer la performance commerciale #SQL #Excel #Python.<br />
+                            <p data-lang="fr" style="display: none;">Réalisation d'études en vue d'améliorer la performance commerciale #SQL #Excel #Python.<br />
                             Cartographie statistique #Articque.<br />
                             Mise en place de tableaux de bord et KPI #Dataviz #BI.<br />
                             Programmation statistique et création d'application sur #VBA.</p>
-                            <p>Conduct studies to improve business performance #SQL #Excel #Python.<br />
+                            <p data-lang="en">Conduct studies to improve business performance #SQL #Excel #Python.<br />
                             Statistical mapping #Articque.<br />
                             Implementation of dashboards and KPIs #Dataviz #BI.<br />
                             Statistical programming and application creation on #VBA.</p>
@@ -103,11 +104,11 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Data Analyst</h3>
                             <div class="subheading mb-3">Fretly</div>
-                            <p>Traitement des données (structuration, consolidation et nettoyage des données de transport collectées) pour préparer leur analyse #ETL #R #Python.<br />
+                            <p data-lang="fr" style="display: none;">Traitement des données (structuration, consolidation et nettoyage des données de transport collectées) pour préparer leur analyse #ETL #R #Python.<br />
                             Modélisation de grilles tarifaires de transporteurs pour analyser la facturation transport #Excel #ETL.<br />
                             Mise à jour de tableaux de bords et de KPI sur le portail client #Dataviz #BI.<br />
                             Analyse des données pour permettre au métier de décider et d’agir (recherche de causes racines, proposition d’actions correctrices…) #Dataviz #R #Excel.</p>
-                            <p>Data processing (structuring, consolidation and cleaning of collected transport data) to prepare their analysis #ETL #R #Python.<br />
+                            <p data-lang="en">Data processing (structuring, consolidation and cleaning of collected transport data) to prepare their analysis #ETL #R #Python.<br />
                             Modelling of carrier rate sheets to analyse transport invoicing #Excel #ETL.<br />
                             Update of dashboards and KPIs on the customer portal #Dataviz #BI.<br />
                             Analysis of data to enable the business to decide and act (root cause investigation, proposed corrective actions, etc.) #Dataviz #R #Excel.</p>
@@ -119,11 +120,11 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Assistant Statistician</h3>
                             <div class="subheading mb-3">Observatoire Régional de la Santé Auvergne-Rhône-Alpes</div>
-                            <p>Gestion, traitement et analyse de données sanitaires et épidémiologiques.<br />
+                            <p data-lang="fr" style="display: none;">Gestion, traitement et analyse de données sanitaires et épidémiologiques.<br />
                             Programmation statistique et création d'application sur #VBA.<br />
                             Cartographie statistique sur #ArcGis et #QGIS.<br />
                             Traitement, gestion et modélisation de résultats d'enquêtes statistiques.</p>
-                            <p>Management, treatment and analysis of health and epidemiological data.<br />
+                            <p data-lang="en">Management, treatment and analysis of health and epidemiological data.<br />
                             Statistical programming and application creation on #VBA.<br />
                             Statistical mapping on #ArcGis and #QGIS.<br />
                             Processing, management and modelling of statistical survey results.</p>
@@ -214,12 +215,12 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">IUT Lumière Lyon 2</h3>
                             <div class="subheading mb-3">Education Diploma of Technology in statistics & BI  (DUT STID)</div>
-                            <p>Interroger les bases de données à des fins décisionnelles.<br />
+                            <p data-lang="fr" style="display: none;">Interroger les bases de données à des fins décisionnelles.<br />
                             Analyser statistiquement les données.<br />
                             Valoriser une production dans un contexte professionnel.<br />
                             Modéliser les données dans un cadre statistique.<br />
                             Développer un outil décisionnel.</p>
-                            <p>Query databases for decision-making purposes.<br />
+                            <p data-lang="en">Query databases for decision-making purposes.<br />
                             Statistically analyze the data.<br />
                             Valuing a production in a professional context.<br />
                             Model the data within a statistical framework.<br />

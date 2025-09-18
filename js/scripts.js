@@ -8,6 +8,25 @@
 // 
 
 window.addEventListener('DOMContentLoaded', event => {
+    // Language toggle function
+    window.toggleLanguage = function() {
+        const button = document.getElementById('langToggle');
+        const currentLang = button.textContent;
+        const newLang = currentLang === 'FR' ? 'EN' : 'FR';
+        const showLang = currentLang === 'FR' ? 'fr' : 'en';
+        const hideLang = currentLang === 'FR' ? 'en' : 'fr';
+        
+        // Update button text
+        button.textContent = newLang;
+        
+        // Toggle visibility of language elements
+        document.querySelectorAll(`[data-lang="${showLang}"]`).forEach(el => {
+            el.style.display = '';
+        });
+        document.querySelectorAll(`[data-lang="${hideLang}"]`).forEach(el => {
+            el.style.display = 'none';
+        });
+    };
 
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
